@@ -24,10 +24,10 @@ namespace Lab4
         static void Calc(int num)
         {
             //display formatted table
-            Console.WriteLine("Number    Squared    Cubed");
-            Console.WriteLine("=======   =======    =======");
             const string format = "{0, -10} {1, -10} {2, -10}";
-            for(int i = 1; i <= num; i++)
+            Console.WriteLine(string.Format(format, "Number", "Squared", "Cubed"));
+            Console.WriteLine(string.Format(format, "=======", "=======", "======="));
+            for (int i = 1; i <= num; i++)
             {
                 Console.WriteLine(string.Format(format, i, i * i, i * i * i));
             }
